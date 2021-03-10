@@ -13,14 +13,14 @@ public class User {
 
     private boolean married;
 
-    private Data birthday;
+    private String birthday;
 
 
     public User() {
 
     }
 
-    public User(String name, String email, String password, String gender, String note, String profession, boolean married, Data birthday) {
+    public User(String name, String email, String password, String gender, String note, String profession, boolean married, String birthday) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -87,12 +87,25 @@ public class User {
         this.married = married;
     }
 
-    public Data getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Data birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", gender='" + gender + '\'' +
+                ", note='" + note + '\'' +
+                ", profession='" + profession + '\'' +
+                ", married=" + married +
+                ", birthday='" + birthday + '\'' +
+                '}';
+    }
 }
